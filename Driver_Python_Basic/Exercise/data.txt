@@ -1,0 +1,5 @@
+Dog 500
+Cat 40
+Hamster 33
+Fish 20
+Snake 11

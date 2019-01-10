@@ -1,0 +1,1 @@
+Nhưng tôi sử dụng git@github.com:username/new_repochứ không phải https://github.com/username/new_repo, vì trước đây là để sử dụng với ssh (nếu bạn thiết lập ssh như tôi đã đề cập trong lần đầu tiên của bạn , thì bạn sẽ không phải nhập mật khẩu mỗi khi bạn đẩy mọi thứ lên github). Nếu bạn sử dụng cấu trúc sau, bạn sẽ phải nhập mật khẩu github của mình mỗi lần bạn đẩy sang github.
