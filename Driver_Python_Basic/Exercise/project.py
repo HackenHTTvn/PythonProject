@@ -1,4 +1,8 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python
+# GUI requests-html module :
+#   Use request infomatin from html web 
+# https://html.python-requests.org/
+
 # from random import *  # Gọi hàm random số tự nhiên trong 1 khoảng nào đó : randint(1,5)
 # # from random import choice   # Gọi hàm random giá trị trong mảng
 # import turtle         # Gọi thư viện dùng cho Project 3
@@ -10,9 +14,7 @@
 
 
 
-
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+####################################################################################################
 # Project 12 : Call HTML from Python
 ####################################################################################################
 #______________________________________________Library_____________________________________________#
@@ -20,8 +22,11 @@ from lxml import html
 import requests
 #____________________________________________END_Library___________________________________________#
 #____________________________________________CODE_DRIVER___________________________________________#
-page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
-tree = html.fromstring(page.content)
+def P12_call_html():
+    page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
+    tree = html.fromstring(page.content)
+    print(tree.text)
+# print(help(requests))
 #__________________________________________END_CODE_DRIVER_________________________________________#
 ####################################################################################################
 # Project 11 : Craft
@@ -139,7 +144,7 @@ def craft(resource):
 
 #creates a function for placing each resource
 def makeplace(resource):
-  return lambda: place(resource)
+    return lambda: place(resource)
 
 #attaches a 'placing' function to each key press
 def bindPlacingKeys():
@@ -358,7 +363,7 @@ def P10_where_is_space():
     print('People in Space:',result['number'])
     people=result['people']
     for p in people:
-    print(p['name']," in ",p['craft'])
+        print(p['name']," in ",p['craft'])
 
     url_location = 'http://api.open-notify.org/iss-now.json'
     response = urllib.request.urlopen(url_location)
@@ -455,7 +460,7 @@ def P9_game_escape():
         'Garden'      : {
             'north'   : 'Dining Room'
             }
-    }
+        }
 
     #start the player in the Hall
     currentRoom = 'Hall'
